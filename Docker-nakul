@@ -1,0 +1,9 @@
+FROM ubuntu:18.04
+
+RUN apt-get update
+RUN apt-get install -y redis-server
+RUN apt-get clean
+
+EXPOSE 8180
+
+CMD ["redis-server", "--protected-mode no"]
